@@ -1,0 +1,60 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MultiUserAddressBook.master.cs" Inherits="Content_MultiUserAddressBook" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="~/Content/CSS/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/CSS/bootstrap-theme.min.css" rel="stylesheet" />
+    <script src="~/Content/JS/bootstrap.bundle.min.js"></script>
+     <asp:ContentPlaceHolder id="cphead" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+         <div class="container">
+            <div class="row">
+                 <div class="col-md-12  "> 
+                        <p style="text-align:left">             
+                        <asp:Image ID="imglogo" runat ="server" ImageUrl="https://www.darshan.ac.in/Content/media/DU-logo.svg" />
+                        </p>
+                     </div>
+                <div class="col-md-8 text-center">
+                    <h1 style="padding: 30px; background-color: lightblue; color: darkblue">MultiUserAddress Book</h1>
+                    <hr style="border-top: 1px solid black" />
+                    <div>
+                        <asp:HyperLink runat="server" ID="hlCountry" Text="Country" NavigateUrl="~/AdminPanel/Country/List" ForeColor="Black" CssClass ="btn btn-outline-warning btn-sm" />
+                        &nbsp;&nbsp;|&nbsp;&nbsp;
+                        <asp:HyperLink runat="server" ID="hlState" Text="State" NavigateUrl="~/AdminPanel/State/List" ForeColor="Black" CssClass="btn btn-outline-warning btn-sm" />
+                        &nbsp;&nbsp;|&nbsp;&nbsp;
+                        <asp:HyperLink runat="server" ID="hlCity" Text="City" NavigateUrl="~/AdminPanel/City/List" ForeColor="Black" CssClass="btn btn-outline-warning btn-sm"/>
+                        &nbsp;&nbsp;|&nbsp;&nbsp;
+                        <asp:HyperLink runat="server" ID="hlContactCategory" Text="ContactCategory" NavigateUrl="~/AdminPanel/ContactCategory/List" ForeColor="Black" CssClass="btn btn-outline-warning btn-sm" />
+                        &nbsp;&nbsp;|&nbsp;&nbsp;
+                        <asp:HyperLink runat="server" ID="hlContact" Text="Contact" NavigateUrl="~/AdminPanel/Contact/List" ForeColor="Black" CssClass="btn btn-outline-warning btn-sm" />
+                    </div>
+                    <hr style="border-top: 1px solid black" />
+                </div>
+                <div class="col-md-4">
+                    <asp:Label ID="lblUserName" runat="server"></asp:Label>
+                     &nbsp;&nbsp;|&nbsp;&nbsp;
+                    <asp:LinkButton ID="lbtnLogout" runat="server" Text="Logout" OnClick="lbtnLogout_Click"></asp:LinkButton>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                     <asp:ContentPlaceHolder id="cphMainContent" runat="server">
+                     </asp:ContentPlaceHolder><br />
+                </div>
+            </div><hr style="border-top:1px solid black"/>
+            <div class="row">
+                <div class="col-md-12 text-center" style="background-color:lightblue; padding:10px">
+                   <b>Raj Vaghela | 190540107216 | 190540107216@darshan.ac.in</b> 
+                </div>
+            </div>
+             <hr style="border-top:1px solid black"/>
+    </div>
+    </form>
+</body>
+</html>
